@@ -1,0 +1,7 @@
+# Function dependencies, for example:
+# package>=version
+numpy
+scipy
+google-cloud-storage
+google-cloud-firestore
+librosa
