@@ -28,7 +28,7 @@ def analyze_sound(event, context):
 
     y_mono = librosa.to_mono(y)
     y_mono_22050 = librosa.resample(y_mono, sr, 22050)
-    mfccs = librosa.feature.mfcc(y=y, sr=22050, n_mfcc=12)
+    mfccs = librosa.feature.mfcc(y=y_mono_22050, sr=22050, n_mfcc=12)
 
     mean_mfccs = [np.mean(mfcc) for mfcc in mfccs] 
 
